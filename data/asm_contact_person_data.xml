@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo noupdate="1">
+    <record id="contact_sto" model="asm.contact.person">
+        <field name="first_name">Stopchak</field>
+        <field name="last_name">Dmytro</field>
+        <field name="middle_name">Ayaan</field>
+        <field name="gender">male</field>
+        <field name="active">true</field>
+    </record>
+    <record id="contact_k" model="asm.contact.person">
+        <field name="first_name">Stephan</field>
+        <field name="last_name">Campos</field>
+        <field name="middle_name">Stephan</field>
+        <field name="gender">male</field>
+        <field name="active">true</field>
+    </record>
+    <record id="contact_s" model="asm.contact.person">
+        <field name="first_name">Ariadne</field>
+        <field name="last_name">Stephan</field>
+        <field name="middle_name">Ayaan</field>
+        <field name="gender">male</field>
+        <field name="active">true</field>
+    </record>
+</odoo>

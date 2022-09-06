@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo noupdate="1">
+    <record id="emp_sto" model="asm.employee">
+        <field name="first_name">Amba</field>
+        <field name="last_name">Dmytro</field>
+        <field name="middle_name">Mcdougall</field>
+        <field name="gender">male</field>
+        <field name="active">true</field>
+        <field name="position">manager</field>
+    </record>
+    <record id="emp_k" model="asm.employee">
+        <field name="first_name">Chamberlain</field>
+        <field name="last_name">Campos</field>
+        <field name="middle_name">Stephan</field>
+        <field name="gender">male</field>
+        <field name="active">true</field>
+        <field name="position">manager</field>
+    </record>
+    <record id="emp_s" model="asm.employee">
+        <field name="first_name">Liya</field>
+        <field name="last_name">Stephan</field>
+        <field name="middle_name">Ayaan</field>
+        <field name="gender">female</field>
+        <field name="active">true</field>
+        <field name="position">manager</field>
+    </record>
+</odoo>

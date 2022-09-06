@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo noupdate="1">
+    <record id="order_bad" model="asm.order">
+        <field name="name">90000</field>
+        <field name="client_id" ref="contact_k"/>
+        <field name="personal_manager_id" ref="emp_k"/>
+        <field name="car_id" ref="car_bad"/>
+        <field name="status">accepted</field>
+    </record>
+    <record id="order_good" model="asm.order">
+        <field name="name">90001</field>
+        <field name="client_id" ref="contact_k"/>
+        <field name="personal_manager_id" ref="emp_k"/>
+        <field name="car_id" ref="car_bad"/>
+        <field name="status">accepted</field>
+    </record>
+    <record id="order_normal" model="asm.order">
+        <field name="name">90003</field>
+        <field name="client_id" ref="contact_k"/>
+        <field name="personal_manager_id" ref="emp_k"/>
+        <field name="car_id" ref="car_bad"/>
+        <field name="status">accepted</field>
+    </record>
+</odoo>

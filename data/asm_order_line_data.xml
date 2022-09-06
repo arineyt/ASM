@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo noupdate="1">
+    <record id="line_calculation" model="asm.order.line">
+        <field name="price_unit">4444</field>
+        <field name="type_of_repair_id" ref="repair_calculation"/>
+        <field name="order_id" ref="order_bad"/>
+    </record>
+    <record id="line_psp" model="asm.order.line">
+        <field name="price_unit">3333</field>
+        <field name="type_of_repair_id" ref="repair_psp"/>
+        <field name="order_id" ref="order_bad"/>
+    </record>
+    <record id="line_iae" model="asm.order.line">
+        <field name="price_unit">7777</field>
+        <field name="type_of_repair_id" ref="repair_iae"/>
+        <field name="order_id" ref="order_bad"/>
+    </record>
+</odoo>

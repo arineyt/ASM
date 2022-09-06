@@ -1,0 +1,577 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* asm
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 15.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-09-06 21:56+0000\n"
+"PO-Revision-Date: 2022-09-06 21:56+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: asm
+#: model:ir.actions.report,print_report_name:asm.action_report_manager
+msgid "'Manager - %s' % (object.display_name)"
+msgstr ""
+
+#. module: asm
+#: model:ir.module.category,name:asm.category_asm
+msgid "ASM"
+msgstr "АСУ"
+
+#. module: asm
+#: model:ir.model.fields.selection,name:asm.selection__asm_order__status__accepted
+msgid "Accepted"
+msgstr "Прийнятий"
+
+#. module: asm
+#: model:ir.model.fields,field_description:asm.field_asm_contact_person__active
+#: model:ir.model.fields,field_description:asm.field_asm_employee__active
+#: model:ir.model.fields,field_description:asm.field_asm_person_mixin__active
+msgid "Active"
+msgstr "Активний"
+
+#. module: asm
+#: model:res.groups,name:asm.group_asm_admin
+msgid "Administrator"
+msgstr "Адміністратор"
+
+#. module: asm
+#: model:res.groups,comment:asm.group_asm_admin
+msgid "Administrators of the ASM (full rights)"
+msgstr "Адміністратор АСУ"
+
+#. module: asm
+#: model:ir.model.fields,field_description:asm.field_asm_car__age
+msgid "Age"
+msgstr "Вік"
+
+#. module: asm
+#: model_terms:ir.ui.view,arch_db:asm.order_trust_wizard_form
+msgid "Approve"
+msgstr "Затверджувати"
+
+#. module: asm
+#: model:res.groups,name:asm.group_approve_order_of_blacklisted_customer
+msgid "Approve sale order of blacklisted customer"
+msgstr "Затвердити замовлення на продаж клієнту з чорного списку"
+
+#. module: asm
+#: model:ir.ui.menu,name:asm.asm_menu_root
+msgid "Automotive Service Management"
+msgstr "Управління автомобільними послугами"
+
+#. module: asm
+#: model:ir.model.fields.selection,name:asm.selection__asm_car__degree_of_damage__3
+msgid "Bad"
+msgstr "Поганий"
+
+#. module: asm
+#: model:ir.model.fields.selection,name:asm.selection__asm_contact_person__trust_state__blacklisted
+msgid "Blacklisted"
+msgstr "Чорний список"
+
+#. module: asm
+#: code:addons/asm/models/asm_order.py:0
+#, python-format
+msgid "Blacklisted Customer"
+msgstr "Замовник у чорному списку"
+
+#. module: asm
+#: model_terms:ir.ui.view,arch_db:asm.order_trust_wizard_form
+msgid "Cancel"
+msgstr "Відміна"
+
+#. module: asm
+#: model:ir.model.fields.selection,name:asm.selection__asm_order__status__canceled
+msgid "Canceled"
+msgstr "Відмінено"
+
+#. module: asm
+#: model:ir.actions.act_window,name:asm.car_action
+#: model:ir.model,name:asm.model_asm_car
+#: model:ir.model.fields,field_description:asm.field_asm_employee__car_ids
+#: model:ir.model.fields,field_description:asm.field_asm_order__car_id
+#: model:ir.ui.menu,name:asm.car_asm_tree
+#: model_terms:ir.ui.view,arch_db:asm.table_of_orders
+msgid "Car"
+msgstr "Машина"
+
+#. module: asm
+#: model:ir.ui.menu,name:asm.asm_cars_menu
+msgid "Cars"
+msgstr "Машини"
+
+#. module: asm
+#: model_terms:ir.actions.act_window,help:asm.car_action
+msgid "Click here to add new car."
+msgstr "Клацніть тут, щоб додати новий автомобіль."
+
+#. module: asm
+#: model_terms:ir.actions.act_window,help:asm.contact_person_action
+msgid "Click here to add new contact person."
+msgstr "Клацніть тут, щоб додати нову контактну особу."
+
+#. module: asm
+#: model_terms:ir.actions.act_window,help:asm.employee_action
+msgid "Click here to add new employee."
+msgstr "Клацніть тут, щоб додати нового працівника."
+
+#. module: asm
+#: model_terms:ir.actions.act_window,help:asm.order_action
+msgid "Click here to add new order"
+msgstr "Клацніть тут, щоб додати нове замовлення"
+
+#. module: asm
+#: model_terms:ir.actions.act_window,help:asm.type_of_repair_action
+msgid "Click here to add new type of repair"
+msgstr "Клацніть тут, щоб додати новий тип ремонту"
+
+#. module: asm
+#: model:ir.model.fields,field_description:asm.field_asm_order__client_id
+msgid "Client"
+msgstr "Кдієнт"
+
+#. module: asm
+#: model:ir.model.fields,field_description:asm.field_asm_employee__color
+msgid "Color"
+msgstr "Колір"
+
+#. module: asm
+#: model:ir.model.fields.selection,name:asm.selection__asm_order__status__completed
+msgid "Completed"
+msgstr "Завершений"
+
+#. module: asm
+#: model:ir.model.fields,field_description:asm.field_asm_car__contact_person_id
+msgid "Contact Person"
+msgstr "Контактна особа"
+
+#. module: asm
+#: model:ir.actions.act_window,name:asm.contact_person_action
+#: model:ir.model,name:asm.model_asm_contact_person
+#: model:ir.ui.menu,name:asm.contact_person_asm_tree
+msgid "Contact person"
+msgstr "Контактна особа"
+
+#. module: asm
+#: model_terms:ir.ui.view,arch_db:asm.car_view_form
+#: model_terms:ir.ui.view,arch_db:asm.contact_person_view_form
+#: model_terms:ir.ui.view,arch_db:asm.employee_view_form
+msgid "Contacts"
+msgstr "Контакти"
+
+#. module: asm
+#: model:ir.model.fields,field_description:asm.field_asm_car__create_uid
+#: model:ir.model.fields,field_description:asm.field_asm_contact_person__create_uid
+#: model:ir.model.fields,field_description:asm.field_asm_employee__create_uid
+#: model:ir.model.fields,field_description:asm.field_asm_order__create_uid
+#: model:ir.model.fields,field_description:asm.field_asm_order_line__create_uid
+#: model:ir.model.fields,field_description:asm.field_asm_type_repair__create_uid
+#: model:ir.model.fields,field_description:asm.field_order_trust_wizard__create_uid
+msgid "Created by"
+msgstr "Створений"
+
+#. module: asm
+#: model:ir.model.fields,field_description:asm.field_asm_car__create_date
+#: model:ir.model.fields,field_description:asm.field_asm_contact_person__create_date
+#: model:ir.model.fields,field_description:asm.field_asm_employee__create_date
+#: model:ir.model.fields,field_description:asm.field_asm_order__create_date
+#: model:ir.model.fields,field_description:asm.field_asm_order_line__create_date
+#: model:ir.model.fields,field_description:asm.field_asm_type_repair__create_date
+#: model:ir.model.fields,field_description:asm.field_order_trust_wizard__create_date
+msgid "Created on"
+msgstr "Створений на"
+
+#. module: asm
+#: model:ir.model.fields,field_description:asm.field_order_trust_wizard__partner_id
+msgid "Customer"
+msgstr "Замовник"
+
+#. module: asm
+#: model:ir.model.fields,field_description:asm.field_asm_car__degree_of_damage
+msgid "Degree Of Damage"
+msgstr "Ступінь шкоди"
+
+#. module: asm
+#: model_terms:ir.ui.view,arch_db:asm.employee_view_kanban
+msgid "Delete"
+msgstr "Видалити"
+
+#. module: asm
+#: model:ir.model.fields,field_description:asm.field_asm_car__description
+#: model:ir.model.fields,field_description:asm.field_asm_contact_person__description
+#: model:ir.model.fields,field_description:asm.field_asm_employee__description
+#: model:ir.model.fields,field_description:asm.field_asm_order__description
+#: model:ir.model.fields,field_description:asm.field_asm_order_line__name
+#: model_terms:ir.ui.view,arch_db:asm.car_view_form
+#: model_terms:ir.ui.view,arch_db:asm.contact_person_view_form
+#: model_terms:ir.ui.view,arch_db:asm.employee_view_form
+#: model_terms:ir.ui.view,arch_db:asm.order_view_form
+#: model_terms:ir.ui.view,arch_db:asm.type_of_repair_view_form
+msgid "Description"
+msgstr "Опис"
+
+#. module: asm
+#: model:ir.model.fields,field_description:asm.field_asm_car__display_name
+#: model:ir.model.fields,field_description:asm.field_asm_contact_person__display_name
+#: model:ir.model.fields,field_description:asm.field_asm_employee__display_name
+#: model:ir.model.fields,field_description:asm.field_asm_order__display_name
+#: model:ir.model.fields,field_description:asm.field_asm_order_line__display_name
+#: model:ir.model.fields,field_description:asm.field_asm_type_repair__display_name
+#: model:ir.model.fields,field_description:asm.field_order_trust_wizard__display_name
+msgid "Display Name"
+msgstr "Відображення назви"
+
+#. module: asm
+#: model_terms:ir.ui.view,arch_db:asm.employee_view_kanban
+msgid "Edit"
+msgstr "Редагувати"
+
+#. module: asm
+#: model:res.groups,name:asm.group_edit_partner_trust_state
+msgid "Edit partner trust state"
+msgstr "Редагувати стан партнера"
+
+#. module: asm
+#: model:ir.model.fields,field_description:asm.field_asm_contact_person__email
+#: model:ir.model.fields,field_description:asm.field_asm_employee__email
+#: model:ir.model.fields,field_description:asm.field_asm_person_mixin__email
+msgid "Email"
+msgstr "Електронна почта"
+
+#. module: asm
+#: model:ir.model,name:asm.model_asm_employee
+#: model:ir.ui.menu,name:asm.employee_asm_tree
+msgid "Employee"
+msgstr "Працівник"
+
+#. module: asm
+#: model:ir.actions.act_window,name:asm.employee_action
+msgid "Employees"
+msgstr "Працівники"
+
+#. module: asm
+#: code:addons/asm/models/asm_person_mixin.py:0
+#: model:ir.model.fields.selection,name:asm.selection__asm_contact_person__gender__female
+#: model:ir.model.fields.selection,name:asm.selection__asm_employee__gender__female
+#: model:ir.model.fields.selection,name:asm.selection__asm_person_mixin__gender__female
+#, python-format
+msgid "Female"
+msgstr "Жінка"
+
+#. module: asm
+#: model:ir.model.fields,field_description:asm.field_asm_contact_person__first_name
+#: model:ir.model.fields,field_description:asm.field_asm_employee__first_name
+#: model:ir.model.fields,field_description:asm.field_asm_person_mixin__first_name
+msgid "First Name"
+msgstr "Ім'я"
+
+#. module: asm
+#: model:ir.model.fields,field_description:asm.field_asm_contact_person__gender
+#: model:ir.model.fields,field_description:asm.field_asm_employee__gender
+#: model:ir.model.fields,field_description:asm.field_asm_person_mixin__gender
+msgid "Gender"
+msgstr "Стать"
+
+#. module: asm
+#: model:ir.model.fields.selection,name:asm.selection__asm_car__degree_of_damage__1
+msgid "Good"
+msgstr "Добрий"
+
+#. module: asm
+#: model_terms:ir.ui.view,arch_db:asm.report_manager
+msgid "History of activity"
+msgstr "Історія активності"
+
+#. module: asm
+#: model:ir.model.fields,field_description:asm.field_asm_car__id
+#: model:ir.model.fields,field_description:asm.field_asm_contact_person__id
+#: model:ir.model.fields,field_description:asm.field_asm_employee__id
+#: model:ir.model.fields,field_description:asm.field_asm_order__id
+#: model:ir.model.fields,field_description:asm.field_asm_order_line__id
+#: model:ir.model.fields,field_description:asm.field_asm_type_repair__id
+#: model:ir.model.fields,field_description:asm.field_order_trust_wizard__id
+msgid "ID"
+msgstr "Ід"
+
+#. module: asm
+#: model:ir.model.fields,field_description:asm.field_asm_employee__intern_ids
+#: model_terms:ir.ui.view,arch_db:asm.employee_view_form
+msgid "Interns"
+msgstr "Інтерни"
+
+#. module: asm
+#: model:ir.model.fields,field_description:asm.field_asm_employee__is_intern
+msgid "Is Intern"
+msgstr "Це інтерн"
+
+#. module: asm
+#: model:ir.model.fields,field_description:asm.field_asm_car____last_update
+#: model:ir.model.fields,field_description:asm.field_asm_contact_person____last_update
+#: model:ir.model.fields,field_description:asm.field_asm_employee____last_update
+#: model:ir.model.fields,field_description:asm.field_asm_order____last_update
+#: model:ir.model.fields,field_description:asm.field_asm_order_line____last_update
+#: model:ir.model.fields,field_description:asm.field_asm_type_repair____last_update
+#: model:ir.model.fields,field_description:asm.field_order_trust_wizard____last_update
+msgid "Last Modified on"
+msgstr "Останній раз оновлено"
+
+#. module: asm
+#: model:ir.model.fields,field_description:asm.field_asm_contact_person__last_name
+#: model:ir.model.fields,field_description:asm.field_asm_employee__last_name
+#: model:ir.model.fields,field_description:asm.field_asm_person_mixin__last_name
+msgid "Last Name"
+msgstr "Прізвище"
+
+#. module: asm
+#: model:ir.model.fields,field_description:asm.field_asm_car__write_uid
+#: model:ir.model.fields,field_description:asm.field_asm_contact_person__write_uid
+#: model:ir.model.fields,field_description:asm.field_asm_employee__write_uid
+#: model:ir.model.fields,field_description:asm.field_asm_order__write_uid
+#: model:ir.model.fields,field_description:asm.field_asm_order_line__write_uid
+#: model:ir.model.fields,field_description:asm.field_asm_type_repair__write_uid
+#: model:ir.model.fields,field_description:asm.field_order_trust_wizard__write_uid
+msgid "Last Updated by"
+msgstr "Останній раз оновлено"
+
+#. module: asm
+#: model:ir.model.fields,field_description:asm.field_asm_car__write_date
+#: model:ir.model.fields,field_description:asm.field_asm_contact_person__write_date
+#: model:ir.model.fields,field_description:asm.field_asm_employee__write_date
+#: model:ir.model.fields,field_description:asm.field_asm_order__write_date
+#: model:ir.model.fields,field_description:asm.field_asm_order_line__write_date
+#: model:ir.model.fields,field_description:asm.field_asm_type_repair__write_date
+#: model:ir.model.fields,field_description:asm.field_order_trust_wizard__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: asm
+#: model_terms:ir.ui.view,arch_db:asm.main_header
+msgid "Logo"
+msgstr ""
+
+#. module: asm
+#: code:addons/asm/models/asm_person_mixin.py:0
+#: model:ir.model.fields.selection,name:asm.selection__asm_contact_person__gender__male
+#: model:ir.model.fields.selection,name:asm.selection__asm_employee__gender__male
+#: model:ir.model.fields.selection,name:asm.selection__asm_person_mixin__gender__male
+#, python-format
+msgid "Male"
+msgstr "Чоловік"
+
+#. module: asm
+#: model:res.groups,name:asm.group_asm_manager
+msgid "Manager"
+msgstr "Менеджер"
+
+#. module: asm
+#: model:ir.actions.report,name:asm.action_report_manager
+msgid "Manager Report"
+msgstr "Звіт менеджера"
+
+#. module: asm
+#: model:res.groups,comment:asm.group_asm_manager
+msgid "Manager of the ASM"
+msgstr "Менеджер АСУ"
+
+#. module: asm
+#: model:ir.model.fields,field_description:asm.field_asm_employee__mentor_id
+msgid "Mentor"
+msgstr "Ментор"
+
+#. module: asm
+#: model:ir.model.fields,field_description:asm.field_asm_contact_person__middle_name
+#: model:ir.model.fields,field_description:asm.field_asm_employee__middle_name
+#: model:ir.model.fields,field_description:asm.field_asm_person_mixin__middle_name
+msgid "Middle Name"
+msgstr "По батькові"
+
+#. module: asm
+#: model:ir.model.fields,field_description:asm.field_asm_car__mileage_of_the_machine
+msgid "Mileage Of The Machine"
+msgstr "Пробіг машини"
+
+#. module: asm
+#: model:ir.model.fields,field_description:asm.field_asm_car__name
+#: model:ir.model.fields,field_description:asm.field_asm_type_repair__name
+msgid "Name"
+msgstr "Ім'я"
+
+#. module: asm
+#: code:addons/asm/models/asm_order.py:0 code:addons/asm/models/asm_order.py:0
+#: code:addons/asm/models/asm_order.py:0 code:addons/asm/models/asm_order.py:0
+#, python-format
+msgid "New"
+msgstr ""
+
+#. module: asm
+#: model:ir.model.fields.selection,name:asm.selection__asm_car__degree_of_damage__2
+msgid "Normal"
+msgstr "Нормальний"
+
+#. module: asm
+#: model:ir.model.fields,field_description:asm.field_asm_order__name
+msgid "Number"
+msgstr "Номер"
+
+#. module: asm
+#: model:ir.actions.act_window,name:asm.order_action
+#: model:ir.model,name:asm.model_asm_order
+#: model:ir.model.fields,field_description:asm.field_asm_employee__order_ids
+#: model:ir.model.fields,field_description:asm.field_order_trust_wizard__order_id
+#: model:ir.ui.menu,name:asm.order_asm_tree
+#: model_terms:ir.ui.view,arch_db:asm.order_view_form
+#: model_terms:ir.ui.view,arch_db:asm.table_of_orders
+msgid "Order"
+msgstr "Ордер"
+
+#. module: asm
+#: model:ir.model,name:asm.model_asm_order_line
+msgid "Order Line"
+msgstr "Строка ордера"
+
+#. module: asm
+#: model:ir.model.fields,field_description:asm.field_asm_order_line__order_id
+msgid "Order Reference"
+msgstr "Посилання на замовлення"
+
+#. module: asm
+#: model_terms:ir.ui.view,arch_db:asm.history_about_manager
+msgid "Orders"
+msgstr "Ордер"
+
+#. module: asm
+#: model:ir.model,name:asm.model_asm_person_mixin
+msgid "Person mixin"
+msgstr ""
+
+#. module: asm
+#: model:ir.model.fields,field_description:asm.field_asm_car__personal_manager_id
+#: model:ir.model.fields,field_description:asm.field_asm_order__personal_manager_id
+msgid "Personal Manager"
+msgstr "Персональний менеджер"
+
+#. module: asm
+#: model:ir.ui.menu,name:asm.asm_personnel_menu
+msgid "Personnel"
+msgstr "Персонал"
+
+#. module: asm
+#: model:ir.model.fields,field_description:asm.field_asm_contact_person__phone
+#: model:ir.model.fields,field_description:asm.field_asm_employee__phone
+#: model:ir.model.fields,field_description:asm.field_asm_order__telephone
+#: model:ir.model.fields,field_description:asm.field_asm_person_mixin__phone
+msgid "Phone"
+msgstr "Телефон"
+
+#. module: asm
+#: model:ir.model.fields,field_description:asm.field_asm_car__photo
+#: model:ir.model.fields,field_description:asm.field_asm_contact_person__photo
+#: model:ir.model.fields,field_description:asm.field_asm_employee__photo
+#: model:ir.model.fields,field_description:asm.field_asm_person_mixin__photo
+msgid "Photo"
+msgstr "Фото"
+
+#. module: asm
+#: model:ir.model.fields,field_description:asm.field_asm_employee__position
+msgid "Position"
+msgstr "Позиція"
+
+#. module: asm
+#: model:ir.model.fields,field_description:asm.field_asm_order_line__price_unit
+msgid "Price"
+msgstr "Ціна"
+
+#. module: asm
+#: model:ir.ui.menu,name:asm.asm_registry_menu
+msgid "Registry"
+msgstr "Реєстр"
+
+#. module: asm
+#: model_terms:ir.ui.view,arch_db:asm.order_view_form
+msgid "Repairs"
+msgstr "Ремонт"
+
+#. module: asm
+#: model:ir.model.fields,field_description:asm.field_asm_order__status
+#: model_terms:ir.ui.view,arch_db:asm.table_of_orders
+msgid "Status"
+msgstr ""
+
+#. module: asm
+#: model_terms:ir.ui.view,arch_db:asm.table_of_orders
+msgid "Telephone"
+msgstr "Телефон"
+
+#. module: asm
+#: model:ir.model.fields,field_description:asm.field_asm_contact_person__trust_state
+msgid "Trust Status"
+msgstr "Довірений статус"
+
+#. module: asm
+#: model:ir.model.fields.selection,name:asm.selection__asm_contact_person__trust_state__trusted
+msgid "Trusted"
+msgstr "Довірений"
+
+#. module: asm
+#: model:ir.model.fields,field_description:asm.field_asm_order_line__type_of_repair_id
+msgid "Type Of Repair"
+msgstr "Тип ремонту"
+
+#. module: asm
+#: model:ir.model.fields,field_description:asm.field_asm_order__type_repair_ids
+msgid "Type Repair"
+msgstr ""
+
+#. module: asm
+#: model:ir.actions.act_window,name:asm.type_of_repair_action
+#: model:ir.ui.menu,name:asm.type_of_repair_asm_tree
+msgid "Type of repair"
+msgstr "Тип ремонту"
+
+#. module: asm
+#: model:ir.model,name:asm.model_asm_type_repair
+msgid "Type repair"
+msgstr "Тип ремонту"
+
+#. module: asm
+#: model:res.groups,name:asm.group_asm_user
+msgid "User"
+msgstr "Користувач"
+
+#. module: asm
+#: model:ir.module.category,description:asm.category_asm
+msgid "User access levels for the ASM"
+msgstr "Рівні доступу користувача для ASM"
+
+#. module: asm
+#: model:res.groups,comment:asm.group_asm_user
+msgid "Users of the ASM"
+msgstr ""
+
+#. module: asm
+#: model:ir.model.fields,field_description:asm.field_asm_car__VIN
+msgid "Vin"
+msgstr "ВІН"
+
+#. module: asm
+#: model:ir.model.fields,field_description:asm.field_asm_car__year_of_issue
+msgid "Year Of Issue"
+msgstr "Рік випуску"
+
+#. module: asm
+#: model_terms:ir.ui.view,arch_db:asm.order_trust_wizard_form
+msgid "is blacklisted. Are you sure want to approve this Sale Order?"
+msgstr "в чорному списку. Ви впевнені, що хочете затвердити це замовлення на продаж?"
+
+#. module: asm
+#: model:ir.model,name:asm.model_order_trust_wizard
+msgid "order.trust.wizard"
+msgstr ""

@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo noupdate="1">
+    <record id="car_sto" model="asm.car">
+        <field name="name">Amba</field>
+        <field name="year_of_issue" eval="datetime.now()"/>
+        <field name="degree_of_damage">1</field>
+        <field name="VIN">12345678901234567</field>
+        <field name="personal_manager_id" ref="emp_k"/>
+    </record>
+    <record id="car_best" model="asm.car">
+        <field name="name">Best</field>
+        <field name="year_of_issue" eval="datetime.now()"/>
+        <field name="degree_of_damage">2</field>
+        <field name="VIN">12343678901234567</field>
+        <field name="personal_manager_id" ref="emp_k"/>
+    </record>
+        <record id="car_bad" model="asm.car">
+        <field name="name">Bad</field>
+        <field name="year_of_issue" eval="datetime.now()"/>
+        <field name="degree_of_damage">3</field>
+        <field name="VIN">12345878901234567</field>
+        <field name="personal_manager_id" ref="emp_k"/>
+    </record>
+</odoo>
