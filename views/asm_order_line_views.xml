@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="order_line_view_tree" model="ir.ui.view">
+        <field name="name">asm.order.line.view.tree</field>
+        <field name="model">asm.order.line</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="type_of_repair_id"/>
+                <field name="price_unit"/>
+            </tree>
+        </field>
+    </record>
+    <!-- order line form view -->
+    <record id="order_line_view_form" model="ir.ui.view">
+        <field name="name">order.line.view.form</field>
+        <field name="model">asm.order.line</field>
+        <field name="arch" type="xml">
+            <form string="Order line">
+                <sheet>
+                    <group>
+                        <field name="type_of_repair_id"/>
+                        <field name="price_unit"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="order_action" model="ir.actions.act_window">
+        <field name="name">Order</field>
+        <field name="res_model">asm.order.line</field>
+        <field name="view_mode">tree,form</field>
+        <field name="domain">[]</field>
+        <field name="context">{}</field>
+    </record>
+</odoo>

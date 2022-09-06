@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo noupdate="1">
+    <record id="repair_iae" model="asm.type.repair">
+        <field name="name">Installation of additional equipment</field>
+    </record>
+    <record id="repair_calculation" model="asm.type.repair">
+        <field name="name">Calculation</field>
+    </record>
+    <record id="repair_maintenance" model="asm.type.repair">
+        <field name="name">Maintenance</field>
+    </record>
+    <record id="repair_calculation" model="asm.type.repair">
+        <field name="name">Technical repair</field>
+    </record>
+    <record id="repair_bw" model="asm.type.repair">
+        <field name="name">Body work</field>
+    </record>
+    <record id="repair_psp" model="asm.type.repair">
+        <field name="name">Pre-sale preparation</field>
+    </record>
+    <record id="repair_rr" model="asm.type.repair">
+        <field name="name">Re-repair</field>
+    </record>
+    <record id="repair_tr" model="asm.type.repair">
+        <field name="name">Tire storage</field>
+    </record>
+    <record id="repair_guarantee" model="asm.type.repair">
+        <field name="name">Guarantee</field>
+    </record>
+    <record id="repair_washing" model="asm.type.repair">
+        <field name="name">Washing</field>
+    </record>
+    <record id="repair_rts" model="asm.type.repair">
+        <field name="name">Return to the shop</field>
+    </record>
+    <record id="repair_csats" model="asm.type.repair">
+        <field name="name">Complete set according to specification</field>
+    </record>
+</odoo>

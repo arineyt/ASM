@@ -1,0 +1,128 @@
+<odoo>
+
+    <template id="main_header">
+        <div style="text-align:right;">
+
+            <div style="width: 100%; text-align:right">
+                <img t-att-src="image_data_uri(user.company_id.logo)"
+                     style="max-height: 150px;max-width: 300px;" alt="Logo"/>
+            </div>
+
+            <div>
+                <span t-esc="user.company_id.city"/>
+                <br/>
+                <span t-esc="user.company_id.street"/>
+                <br/>
+                <span t-esc="user.company_id.phone"/>
+                <br/>
+                <span t-esc="user.company_id.email"/>
+                <br/>
+            </div>
+
+        </div>
+    </template>
+
+    <template id="information_about_manager">
+        <div style="text-align:right;">
+            <strong>
+                <span t-esc="doc.display_name"/>
+                <br/>
+                <span t-esc="doc.position"/>
+            </strong>
+        </div>
+        <br/>
+    </template>
+
+    <template id="history_about_manager">
+        <div style="text-align:center; margin: 0 auto;">
+            <h3>Orders</h3>
+        </div>
+        <t t-if="len(doc.car_ids)">
+            <t t-foreach="doc.order_ids" t-as="order">
+                <div style="text-align:center; margin: 0 auto;">
+                    <span t-esc="order.display_name"/>
+                    -
+                    <span t-esc="order.client_id.display_name"/>
+                </div>
+            </t>
+        </t>
+    </template>
+
+    <template id="table_of_orders">
+        <div>
+            <br/>
+            <table style="border: 1px solid black;"
+                   width="100%">
+                <tr>
+                    <th style="border: 1px solid black;">
+                        <t>Order</t>
+                    </th>
+                    <th style="border: 1px solid black;">
+                        <t>Car</t>
+                    </th>
+                    <th style="border: 1px solid black;">
+                        <t>Status</t>
+                    </th>
+                    <th style="border: 1px solid black;">
+                        <t>Telephone</t>
+                    </th>
+                </tr>
+                <t t-foreach="doc.order_ids" t-as="order">
+                    <t t-if="order.status == 'completed'">
+                        <t t-set="back_color" t-value="'background-color:green'"/>
+                    </t>
+                    <t t-elif="order.status == 'accepted'">
+                        <t t-set="back_color" t-value="'background-color:yellow'"/>
+                    </t>
+                    <t t-elif="order.status == 'canceled'">
+                        <t t-set="back_color" t-value="'background-color:red'"/>
+                    </t>
+                    <tr style="border: 1px solid black;" t-attf-style="{{back_color}}">
+                        <th>
+                            <div t-field="order.display_name"/>
+                        </th>
+                        <th>
+                            <div t-field="order.car_id"/>
+                        </th>
+                        <th>
+                            <div t-field="order.status"/>
+                        </th>
+                        <th>
+                            <div t-field="order.telephone"/>
+                        </th>
+                    </tr>
+                </t>
+            </table>
+        </div>
+    </template>
+
+    <template id="print_date_time">
+        <div style="text-align:right;">
+            <span t-esc="user.company_id.city"/>
+            <br/>
+            <div name="datetime">
+                <span t-esc="context_timestamp(datetime.datetime.now()).strftime('%Y-%m-%d %H:%M')"/>
+            </div>
+        </div>
+    </template>
+
+    <template id="report_manager">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="doc">
+                <t t-call="asm.main_header"/>
+                <br/>
+                <t t-call="asm.information_about_manager"/>
+                <br/>
+                <div style="text-align:center; margin: 0 auto;">
+                    <h2>History of activity</h2>
+                </div>
+                <t t-call="asm.history_about_manager"/>
+                <br/>
+                <t t-call="asm.table_of_orders"/>
+                <br/>
+                <t t-call="asm.print_date_time"/>
+            </t>
+        </t>
+    </template>
+
+</odoo>

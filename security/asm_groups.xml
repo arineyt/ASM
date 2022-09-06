@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+
+        <record id="category_asm" model="ir.module.category">
+            <field name="name">ASM</field>
+            <field name="description">User access levels for the ASM</field>
+            <field name="sequence">1</field>
+        </record>
+
+        <record id="group_asm_user" model="res.groups">
+            <field name="name">User</field>
+            <field name="category_id" ref="category_asm"/>
+            <field name="comment">Users of the ASM</field>
+        </record>
+
+        <record id="group_asm_manager" model="res.groups">
+            <field name="name">Manager</field>
+            <field name="category_id" ref="category_asm"/>
+            <field name="implied_ids" eval="[(4, ref('group_asm_user'))]"/>
+            <field name="comment">Manager of the ASM</field>
+        </record>
+
+        <record id="group_asm_admin" model="res.groups">
+            <field name="name">Administrator</field>
+            <field name="category_id" ref="category_asm"/>
+            <field name="implied_ids" eval="[(4, ref('group_asm_manager'))]"/>
+            <field name="users" eval="[Command.link(ref('base.user_root')), Command.link(ref('base.user_admin'))]"/>
+            <field name="comment">Administrators of the ASM (full rights)</field>
+        </record>
+
+    </data>
+</odoo>

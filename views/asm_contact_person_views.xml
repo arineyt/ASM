@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="contact_person_view_tree" model="ir.ui.view">
+        <field name="name">contact.person.view.tree</field>
+        <field name="model">asm.contact.person</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="first_name"/>
+                <field name="last_name"/>
+                <field name="middle_name"/>
+            </tree>
+        </field>
+    </record>
+    <!-- contact person form view -->
+    <record id="contact_person_view_form" model="ir.ui.view">
+        <field name="name">contact.person.view.form</field>
+        <field name="model">asm.contact.person</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="last_name"/>
+                            <field name="first_name"/>
+                            <field name="middle_name"/>
+                            <field name="gender"/>
+                            <separator string="Contacts"/>
+                            <field name="phone"/>
+                            <field name="email"/>
+                            <field name="trust_state" groups="asm.group_edit_partner_trust_state" />
+                        </group>
+                        <group>
+                            <field name="photo" widget='image' class='oe_avatar'/>
+                        </group>
+                    </group>
+                    <separator string="Description"/>
+                    <field name="description" class="oe-bordered-editor"/>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="contact_person_action" model="ir.actions.act_window">
+        <field name="name">Contact person</field>
+        <field name="res_model">asm.contact.person</field>
+        <field name="view_mode">tree,form</field>
+        <field name="domain">[]</field>
+        <field name="context">{}</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Click here to add new contact person.
+            </p>
+        </field>
+    </record>
+
+    <menuitem
+            id="contact_person_asm_tree"
+            name="Contact person"
+            parent="asm_personnel_menu"
+            action="contact_person_action"
+            sequence="100"/>
+</odoo>

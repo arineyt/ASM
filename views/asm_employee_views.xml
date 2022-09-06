@@ -1,0 +1,168 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <record id="employee_view_tree" model="ir.ui.view">
+        <field name="name">employee.view.tree</field>
+        <field name="model">asm.employee</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="last_name"/>
+                <field name="first_name"/>
+                <field name="middle_name"/>
+                <field name="gender"/>
+                <field name="position"/>
+                <field name="is_intern"/>
+            </tree>
+        </field>
+    </record>
+    <!-- employee form view -->
+    <record id="employee_view_form" model="ir.ui.view">
+        <field name="name">employee.view.form</field>
+        <field name="model">asm.employee</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="last_name"/>
+                            <field name="first_name"/>
+                            <field name="middle_name"/>
+                            <field name="gender"/>
+                            <separator string="Contacts"/>
+                            <field name="phone"/>
+                            <field name="email"/>
+                        </group>
+                        <group>
+                            <field name="photo" widget='image' class='oe_avatar'/>
+                            <field name="position"/>
+                            <field name="is_intern"/>
+                            <field name="mentor_id" attrs="{'invisible':[('is_intern', '=', False)]}"/>
+                        </group>
+                    </group>
+                    <separator string="Description"/>
+                    <field name="description" class="oe-bordered-editor"/>
+                    <notebook>
+                        <page name="interns" string="Interns" attrs="{'invisible':[('is_intern', '=', True)]}">
+                            <field name="intern_ids" mode="kanban">
+                                <kanban>
+                                    <field name="last_name"/>
+                                    <field name="first_name"/>
+                                    <field name="middle_name"/>
+                                    <field name="position"/>
+                                    <field name="photo"/>
+                                    <templates>
+                                        <t t-name="kanban-box">
+                                            <div class="container o_kanban_card_content">
+                                                <field name="photo" widget="image"/>
+                                                <div style="height: 15px;"/>
+                                                <div class="oe_kanban_details">
+                                                    <field name="last_name"/>
+                                                    <field name="first_name"/>
+                                                    <field name="middle_name"/>
+                                                    <div style="height: 15px;"/>
+                                                    <field name="position"/>
+                                                </div>
+                                            </div>
+                                        </t>
+                                    </templates>
+                                </kanban>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="employee_view_kanban" model="ir.ui.view">
+        <field name="name">employee.view.kanban</field>
+        <field name="model">asm.employee</field>
+        <field name="arch" type="xml">
+            <kanban class="o_kanban" default_group_by="position">
+                <field name="last_name"/>
+                <field name="first_name"/>
+                <field name="middle_name"/>
+                <field name="position"/>
+                <field name="is_intern"/>
+                <field name="photo"/>
+                <field name="color"/>
+                <templates>
+                    <t t-name="kanban-box">
+                        <div t-attf-class="{{!selection_mode ? 'oe_kanban_color_' + kanban_getcolor(record.color.raw_value) : ''}} oe_kanban_global_click">
+                            <div class="o_kanban_card_header_title">
+                                <field name="last_name"/>
+                                <field name="first_name"/>
+                                <field name="middle_name"/>
+                                <strong>
+                                    <field name="position"/>
+                                </strong>
+                            </div>
+
+                            <div class="o_dropdown_kanban dropdown">
+                                <a class="dropdown-toggle btn"
+                                   data-toggle="dropdown" href="#">
+                                    <span class="fa fa-ellipsis-v" aria-hidden="true"/>
+                                </a>
+                                <div class="o_kanban_card_manage_setting row mt16">
+                                <div class="dropdown-menu" role="menu">
+                                    <t t-if="widget.editable">
+                                        <a role="menuitem" type="edit"
+                                           class="dropdown-item">Edit
+                                        </a>
+                                    </t>
+                                    <t t-if="widget.deletable">
+                                        <a role="menuitem"
+                                           type="delete"
+                                           class="dropdown-item">Delete
+                                        </a>
+                                    </t>
+                                    <ul class="oe_kanban_colorpicker" data-field="color"/>
+                                </div>
+                                    </div>
+                            </div>
+
+                            <div class="col-xs-12" style="height: 15px;"/>
+
+                            <div class="container o_kanban_card_content">
+                                <div class="row">
+                                    <div class="col-6 o_kanban_primary_left">
+                                        <div class="o_kanban_image">
+                                            <field name="photo" widget="image"/>
+                                        </div>
+                                    </div>
+                                     <div class="col-6 o_kanban_primary_right">
+                                            <field name="car_ids"
+                                                   widget="many2many_tags"/>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-xs-12" style="height: 15px;"/>
+
+
+                        </div>
+                    </t>
+                </templates>
+            </kanban>
+        </field>
+    </record>
+
+    <record id="employee_action" model="ir.actions.act_window">
+        <field name="name">Employees</field>
+        <field name="res_model">asm.employee</field>
+        <field name="view_mode">tree,form,kanban</field>
+        <field name="domain">[]</field>
+        <field name="context">{}</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Click here to add new employee.
+            </p>
+        </field>
+    </record>
+
+    <menuitem
+            id="employee_asm_tree"
+            name="Employee"
+            parent="asm_registry_menu"
+            action="employee_action"
+            sequence="100"/>
+</odoo>

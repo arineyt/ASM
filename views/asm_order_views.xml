@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="order_view_tree" model="ir.ui.view">
+        <field name="name">asm.order.view.tree</field>
+        <field name="model">asm.order</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="status"/>
+                <field name="client_id"/>
+                <field name="car_id"/>
+                <field name="personal_manager_id"/>
+            </tree>
+        </field>
+    </record>
+    <!-- order form view -->
+    <record id="order_view_form" model="ir.ui.view">
+        <field name="name">order.view.form</field>
+        <field name="model">asm.order</field>
+        <field name="arch" type="xml">
+            <form string = "Order">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name"/>
+                            <field name="status"/>
+                        </group>
+                        <group>
+                            <field name="client_id"/>
+                            <field name="car_id"/>
+                            <field name="personal_manager_id"/>
+                            <field name="telephone"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page name="repair" string="Repairs">
+                            <field name="type_repair_ids">
+                                <tree create="true">
+                                    <field name="type_of_repair_id"/>
+                                    <field name="price_unit"/>
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
+                    <separator string="Description"/>
+                    <field name="description" class="oe-bordered-editor"/>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="order_action" model="ir.actions.act_window">
+        <field name="name">Order</field>
+        <field name="res_model">asm.order</field>
+        <field name="view_mode">tree,form</field>
+        <field name="domain">[]</field>
+        <field name="context">{}</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Click here to add new order
+            </p>
+        </field>
+    </record>
+
+    <menuitem
+            id="order_asm_tree"
+            name="Order"
+            parent="asm_registry_menu"
+            action="order_action"
+            sequence="100"/>
+</odoo>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+
+        <record id="group_edit_partner_trust_state" model="res.groups">
+            <field name="name">Edit partner trust state</field>
+        </record>
+
+        <record id="group_approve_order_of_blacklisted_customer" model="res.groups">
+            <field name="name">Approve sale order of blacklisted customer</field>
+        </record>
+
+        <record id="asm_rule_user" model="ir.rule">
+            <field name="name">ASM users can only view own orders</field>
+            <field name="model_id" ref="model_asm_order"/>
+            <field name="domain_force">[('create_uid', '=', user.id)]</field>
+            <field name="groups" eval="[(4, ref('group_asm_user'))]"/>
+            <field name="perm_read" eval="False"/>
+            <field name="perm_write" eval="False"/>
+            <field name="perm_create" eval="False"/>
+            <field name="perm_unlink" eval="True"/>
+        </record>
+
+        <record id="asm_rule_admin" model="ir.rule">
+            <field name="name">ASM administrators have full rights on books</field>
+            <field name="model_id" ref="model_asm_order"/>
+            <field name="domain_force">[(1, '=', 1)]</field>
+            <field name="groups" eval="[(4, ref('group_asm_admin'))]"/>
+        </record>
+
+    </data>
+</odoo>

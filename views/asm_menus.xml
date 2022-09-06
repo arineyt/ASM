@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <!-- Top menu item -->
+    <menuitem
+        id="asm_menu_root"
+        name="Automotive Service Management"
+        sequence="100"/>
+        web_icon="asm,static/description/icon.png"
+    <!-- menu categories -->
+    <menuitem
+        id="asm_registry_menu"
+        name="Registry"
+        parent="asm_menu_root"
+        sequence="10"/>
+    <menuitem
+        id="asm_personnel_menu"
+        name="Personnel"
+        parent="asm_menu_root"
+        sequence="20"/>
+    <menuitem
+        id="asm_cars_menu"
+        name="Cars"
+        parent="asm_menu_root"
+        sequence="30"/>
+</odoo>

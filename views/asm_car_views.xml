@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <record id="car_view_tree" model="ir.ui.view">
+        <field name="name">car.view.tree</field>
+        <field name="model">asm.car</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="VIN"/>
+                <field name="degree_of_damage"/>
+            </tree>
+        </field>
+    </record>
+    <!-- car form view -->
+    <record id="car_view_form" model="ir.ui.view">
+        <field name="name">car.view.form</field>
+        <field name="model">asm.car</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name"/>
+                            <field name="VIN"/>
+                            <field name="year_of_issue"/>
+                            <field name="degree_of_damage"/>
+                            <field name="personal_manager_id"/>
+                            <separator string="Contacts"/>
+                        </group>
+                        <group>
+                            <field name="photo" widget='image'/>
+                        </group>
+                    </group>
+                    <separator string="Description"/>
+                    <field name="description" class="oe-bordered-editor"/>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="car_action" model="ir.actions.act_window">
+        <field name="name">Car</field>
+        <field name="res_model">asm.car</field>
+        <field name="view_mode">tree,form</field>
+        <field name="domain">[]</field>
+        <field name="context">{}</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Click here to add new car.
+            </p>
+        </field>
+    </record>
+
+    <menuitem
+            id="car_asm_tree"
+            name="Car"
+            parent="asm_cars_menu"
+            action="car_action"
+            sequence="100"/>
+</odoo>
