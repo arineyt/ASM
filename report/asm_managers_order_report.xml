@@ -23,6 +23,6 @@
             file="asm.report_manager"
             name="asm.report_manager"
             paperformat="paperformat_lowmargin"
-            print_report_name="'Manager - %s' % (object.display_name)"
+            print_report_name="(object.display_name)"
     />
 </odoo>

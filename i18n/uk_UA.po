@@ -16,11 +16,6 @@ msgstr ""
 "Plural-Forms: \n"
 
 #. module: asm
-#: model:ir.actions.report,print_report_name:asm.action_report_manager
-msgid "'Manager - %s' % (object.display_name)"
-msgstr ""
-
-#. module: asm
 #: model:ir.module.category,name:asm.category_asm
 msgid "ASM"
 msgstr "АСУ"
@@ -286,11 +281,6 @@ msgid "Good"
 msgstr "Добрий"
 
 #. module: asm
-#: model_terms:ir.ui.view,arch_db:asm.report_manager
-msgid "History of activity"
-msgstr "Історія активності"
-
-#. module: asm
 #: model:ir.model.fields,field_description:asm.field_asm_car__id
 #: model:ir.model.fields,field_description:asm.field_asm_contact_person__id
 #: model:ir.model.fields,field_description:asm.field_asm_employee__id
@@ -350,12 +340,12 @@ msgstr "Останній раз оновлено"
 #: model:ir.model.fields,field_description:asm.field_asm_type_repair__write_date
 #: model:ir.model.fields,field_description:asm.field_order_trust_wizard__write_date
 msgid "Last Updated on"
-msgstr ""
+msgstr "Останній раз оновлено"
 
 #. module: asm
 #: model_terms:ir.ui.view,arch_db:asm.main_header
 msgid "Logo"
-msgstr ""
+msgstr "Лого"
 
 #. module: asm
 #: code:addons/asm/models/asm_person_mixin.py:0
@@ -409,7 +399,7 @@ msgstr "Ім'я"
 #: code:addons/asm/models/asm_order.py:0 code:addons/asm/models/asm_order.py:0
 #, python-format
 msgid "New"
-msgstr ""
+msgstr "Новий"
 
 #. module: asm
 #: model:ir.model.fields.selection,name:asm.selection__asm_car__degree_of_damage__2
@@ -450,7 +440,7 @@ msgstr "Ордер"
 #. module: asm
 #: model:ir.model,name:asm.model_asm_person_mixin
 msgid "Person mixin"
-msgstr ""
+msgstr "Персона"
 
 #. module: asm
 #: model:ir.model.fields,field_description:asm.field_asm_car__personal_manager_id
@@ -503,7 +493,7 @@ msgstr "Ремонт"
 #: model:ir.model.fields,field_description:asm.field_asm_order__status
 #: model_terms:ir.ui.view,arch_db:asm.table_of_orders
 msgid "Status"
-msgstr ""
+msgstr "Статус"
 
 #. module: asm
 #: model_terms:ir.ui.view,arch_db:asm.table_of_orders
@@ -528,7 +518,7 @@ msgstr "Тип ремонту"
 #. module: asm
 #: model:ir.model.fields,field_description:asm.field_asm_order__type_repair_ids
 msgid "Type Repair"
-msgstr ""
+msgstr "Тип ремонту"
 
 #. module: asm
 #: model:ir.actions.act_window,name:asm.type_of_repair_action
@@ -554,7 +544,7 @@ msgstr "Рівні доступу користувача для ASM"
 #. module: asm
 #: model:res.groups,comment:asm.group_asm_user
 msgid "Users of the ASM"
-msgstr ""
+msgstr "Користувачі АСУ"
 
 #. module: asm
 #: model:ir.model.fields,field_description:asm.field_asm_car__VIN
@@ -574,4 +564,4 @@ msgstr "в чорному списку. Ви впевнені, що хочете
 #. module: asm
 #: model:ir.model,name:asm.model_order_trust_wizard
 msgid "order.trust.wizard"
-msgstr ""
+msgstr "order.trust.wizard"

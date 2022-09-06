@@ -64,7 +64,7 @@
                         <t>Status</t>
                     </th>
                     <th style="border: 1px solid black;">
-                        <t>Telephone</t>
+                        <t>Phone</t>
                     </th>
                 </tr>
                 <t t-foreach="doc.order_ids" t-as="order">
@@ -114,7 +114,7 @@
                 <t t-call="asm.information_about_manager"/>
                 <br/>
                 <div style="text-align:center; margin: 0 auto;">
-                    <h2>History of activity</h2>
+
                 </div>
                 <t t-call="asm.history_about_manager"/>
                 <br/>
